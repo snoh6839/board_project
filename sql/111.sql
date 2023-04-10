@@ -5,14 +5,7 @@
 -- HeidiSQL 버전:                  11.3.0.6295
 -- --------------------------------------------------------
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- 테이블 board_project.board_info 구조 내보내기
 DROP TABLE IF EXISTS `board_info`;
 CREATE TABLE IF NOT EXISTS `board_info` (
   `board_no` int(11) NOT NULL AUTO_INCREMENT,
@@ -24,9 +17,7 @@ CREATE TABLE IF NOT EXISTS `board_info` (
   PRIMARY KEY (`board_no`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
--- 테이블 데이터 board_project.board_info:~20 rows (대략적) 내보내기
-/*!40000 ALTER TABLE `board_info` DISABLE KEYS */;
-INSERT IGNORE INTO `board_info` (`board_no`, `board_title`, `board_cont`, `create_date`, `del_flag`, `delete_date`) VALUES
+INSERT INTO `board_info` (`board_no`, `board_title`, `board_cont`, `create_date`, `del_flag`, `delete_date`) VALUES
 	(1, '제목 1', '내용 1', '2023-04-10 11:04:33', '0', NULL),
 	(2, '제목 2', '내용 2', '2023-04-10 11:05:04', '0', NULL),
 	(3, '제목 3', '내용 3', '2023-04-10 11:05:09', '0', NULL),
@@ -47,9 +38,3 @@ INSERT IGNORE INTO `board_info` (`board_no`, `board_title`, `board_cont`, `creat
 	(18, '제목 18', '내용 18', '2023-04-10 11:06:17', '0', NULL),
 	(19, '제목 19', '내용 19', '2023-04-10 11:06:24', '0', NULL),
 	(20, '제목 20', '내용 20', '2023-04-10 11:06:30', '0', NULL);
-/*!40000 ALTER TABLE `board_info` ENABLE KEYS */;
-
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
