@@ -1,7 +1,17 @@
 <?php
-    define( "DOC_ROOT", $_SERVER["DOCUMENT_ROOT"]."/" );
-    define( "URL_DB", DOC_ROOT."db/db_common.php" );
-    include_once( URL_DB );
+    // define( "DOC_ROOT", $_SERVER["DOCUMENT_ROOT"]."/" );
+    // define( "URL_DB", DOC_ROOT."db/db_common.php" );
+    // include_once( URL_DB );
+
+    include_once("D:\board_project\db\db_common.php");
+
+    $arr_prepare = 
+        array(
+            "limit_num" => 5
+            ,"offset" => 0
+        );
+    $result = select_board_info_paging($arr_prepare);
+    print_r($result);
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +38,7 @@
             <div class="ko board list ys-board">
                 <div class="common">
                     <div class="board-wrap board-qa">
-                        <table summary="철학과 > 행정업무 > 서류양식모음" class="board-table">
+                        <table class="board-table">
                             <caption class="hide">미니 &gt; 자유 &gt; 게시판</caption>
                             <colgroup>
                                 <col width="10%">
